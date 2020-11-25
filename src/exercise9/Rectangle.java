@@ -50,16 +50,15 @@ public class Rectangle {
         return (height == width) ? "Square" : "Rectangle";
     }
 
-    public String toString() {
+ public String toString() {
         return String.format("%s-[%s, %s], %s, P=%s, A=%s", startPoint, height, width, getType(), calculatePerimeter(), calculateArea());
     }
-
-    public boolean equal(Rectangle otherRectangle) {
+public boolean equal(Rectangle otherRectangle) {
         boolean sameHeight = Utils.equals(height, otherRectangle.height);
         boolean sameWidth = Utils.equals(width, otherRectangle.width);
         boolean sameHeightReversed = Utils.equals(height, otherRectangle.width);
         boolean sameWidthReversed = Utils.equals(width, otherRectangle.height);
 
-        return (sameHeight && sameWidth) || (sameHeightReversed && sameWidthReversed);
+     return (sameHeight && sameWidth) || (sameHeightReversed && sameWidthReversed);
     }
 }
